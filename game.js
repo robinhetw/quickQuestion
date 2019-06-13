@@ -100,10 +100,13 @@ choices.forEach(choice => {
     //    if(selectedAnswer == currentQuestion.answer){
     //        classToApply = 'correct';
     //    }
+
+    
     const classToApply =
       selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
     if (classToApply == "correct") {
       incrementScore(CORRECT_BONUS);
+      
     }
     selectedChoice.parentElement.classList.add(classToApply);
     setTimeout(() => {
@@ -117,7 +120,17 @@ choices.forEach(choice => {
   });
 });
 
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  y.play(); 
+} 
+
 incrementScore = num => {
   score += num;
   scoreText.innerText = score;
 };
+
+

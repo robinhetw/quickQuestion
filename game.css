@@ -82,3 +82,31 @@
 
   }
 }
+
+@media screen and (max-width: 700px){
+  .choice-container {
+    margin-bottom: 1rem;
+  }
+
+  #hud{
+    
+  }
+  
+  #progressBar{
+    width: 13rem;
+    height: 2.5rem;
+    border:.3rem solid #56a5eb;
+    margin-top: 1rem;
+  }
+  .hud-main-text{
+    margin-top: 1.5rem;
+  }
+  #progressBarFull{
+    height: 2rem;
+    background-color: #56a5eb;
+    width: 0%;
+    transition: .3s;
+  }
+
+
+}
