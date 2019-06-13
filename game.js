@@ -101,12 +101,15 @@ choices.forEach(choice => {
     //        classToApply = 'correct';
     //    }
 
-    
+    var x = document.getElementById("correctSound"); 
+    var y = document.getElementById("incorrectSound"); 
     const classToApply =
       selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
     if (classToApply == "correct") {
       incrementScore(CORRECT_BONUS);
-      
+      x.play();
+    } else{
+      y.play();
     }
     selectedChoice.parentElement.classList.add(classToApply);
     setTimeout(() => {
